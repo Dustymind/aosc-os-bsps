@@ -1,7 +1,9 @@
-PKGNAME="linux-kernel-rpi64-5.18.9"
+PKGNAME=linux-kernel-rpi64-${__VER}
 PKGSEC=kernel
-BUILDDEP="bc dracut git"
-PKGDES="Raspberry Pi downstream kernel (Mainline branch)"
+PKGDEP=""
+BUILDDEP="bc dracut git pahole"
+BUILDDEP__ARM64="$BUILDDEP llvm"
+PKGDES="Raspberry Pi downstream Linux Kernel v${__VER} for AOSC OS (Mainline)"
 
 FAIL_ARCH="!(arm64)"
 ABSTRIP=0
@@ -9,4 +11,7 @@ ABELFDEP=0
 ABSPLITDBG=0
 PKGEPOCH=1
 
-PKGBREAK="zfs<=2.0.0"
+PKGBREAK="
+	zfs<=2.2.0
+	nvidia<=530.41.03
+"

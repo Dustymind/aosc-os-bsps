@@ -1,3 +1,10 @@
 VER=5.18.9
+
+# Note: For use inside autobuild/.
+__VER="${VER}"
+
+# Use this for stable releases.
+#REL=1
+
 SRCS="tbl::https://github.com/raspberrypi/linux/archive/63ffb4549f86c0072a6785e78d7897b7a4979f0a.tar.gz"
 CHKSUMS="sha256::39ca7544243cfd6eb1bc430a1935494cd50b661cf079f1381f0f646b1d5955c2"
